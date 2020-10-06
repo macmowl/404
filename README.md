@@ -12,7 +12,6 @@
         <p>it seems Mario can't reached Princess Peach.</p>
         <p>The page you were looking for doesn't exist.</p>
         <button>She may be in this Github page</button>
-        
         <div id="tunnel1"></div>
         <div id="tunnel2"></div>
         <div id="mario"></div>
