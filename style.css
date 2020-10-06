@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'Mario';
+    src: url('media/SuperPlumberBrothers.ttf') format("truetype");
+}
+
+html {
+    background-color: #F5F6FA;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+main {
+    width: 800px;
+    background-color: #889cff;
+    border-radius: 8px;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        0 12.5px 10px rgba(0, 0, 0, 0.035),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+        0 100px 80px rgba(0, 0, 0, 0.07)
+    ;
+    margin: auto;
+    margin-top: 200px;
+    text-align: center;
+    position: relative;
+    height: 400px;
+    padding-top: 30px;
+}
+
+h1 {
+    font-family: 'Mario';
+    font-size: 80px;
+    margin-bottom: 0;
+}
+
+main p {
+    line-height: 50%;
+}
+
+button {
+    padding: 15px;
+    border-radius: 2px;
+    background-color: #d85515;
+    font-family: 'Mario';
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+button:hover {
+    padding: 15px;
+    border-radius: 2px;
+    background-color: #502009;
+    font-family: 'Mario';
+    font-size: 20px;
+    margin-top: 10px;
+    color: white;
+}
+
+#tile {
+    background: url('media/tile.png') repeat-x;
+    bottom: 0;
+    height: 14px;
+    width: 100%;
+    left: 0;
+    position: absolute;
+}
+
+#tunnel1 {
+    background: url('media/tunnel1.png');
+    bottom: 14px;
+    height: 46px;
+    width: 45px;
+    left: 100px;
+    position: absolute;
+}
+
+#tunnel2 {
+    background: url('media/tunnel2.png');
+    bottom: 14px;
+    height: 70px;
+    width: 46px;
+    left: 350px;
+    position: absolute;
+    z-index: 2;
+}
+
+#mario {
+    background: url('media/mario.png');
+    bottom: 15px;
+    height: 31px;
+    width: 30px;
+    left: 355px;
+    position: absolute;
+    z-index: 0;
+}
+
+
+
+#tunnel2:hover + #mario {
+    animation: jump 1.2s infinite;
+}
+
+@keyframes jump {
+    0% { transform: translate(0%, -50%) scale(1.25, 0.75); }
+    50% { transform: translate(0%, -300%) scale(1, 1); }
+    100% { transform: translate(0%, -50%) scale(1.25, 0.75); }
+}
